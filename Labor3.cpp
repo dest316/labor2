@@ -1,6 +1,3 @@
-﻿// Labor3.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
-//
-
 #include <iostream>
 
 using namespace std;
@@ -22,10 +19,11 @@ int main()
     cout << "Теперь вводите значения функции на этом отрезке. Должно быть минимум 2 значения - в точке начала и точке конца отрезка: " << endl;
     for (int i = 0; i < (Count); i++)
     {
-        cout << "Значение равно... ";
-        cin >> temp;
-        fvalue[i] = temp;
-        cout << fvalue[i] << endl;
+        //cout << "Значение равно... ";
+        //cin >> temp;
+        double x = (BegInt + i * ((EndInt - BegInt) / (Count - 1)));
+        fvalue[i] = (x*x) + 2*x + 1;
+        cout << fvalue[i] << endl; 
        // cout << "_____________________" << endl;
     }
     double valueInt = 0;
